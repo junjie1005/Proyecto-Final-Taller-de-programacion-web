@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habilidades Técnicas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: #e5e5e5;
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 24px;
+      margin: 0 0 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    /* Botón hamburguesa */
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #e63946;
+      margin-bottom: 20px;
+    }
+
+    ul.skills {
+      list-style: square;
+      padding-left: 20px;
+      font-size: 16px;
+    }
+
+    ul.skills li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Habilidades Técnicas</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="habilidadestec.html">Habilidades Técnicas</a></li>
+        <li><a href="proyecto.html">Proyectos</a></li>
+        <li><a href="contacto.html">Formulario de Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Mis Habilidades</h2>
+    <ul class="skills">
+      <li>Bases de datos – Creación, gestión y consultas en MySQL</li>
+      <li>Mantenimiento de PCs – Ensamblaje, limpieza, formateo y actualización de hardware</li>
+      <li>Diagnóstico técnico – Identificación y solución de fallas en software y hardware</li>
+      <li>Instalación de sistemas operativos – Windows y Linux</li>
+      <li>Respaldo y recuperación de datos – Copias de seguridad y recuperación ante fallos</li>
+    </ul>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-links");
+      nav.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
+

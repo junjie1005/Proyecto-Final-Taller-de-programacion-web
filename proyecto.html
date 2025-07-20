@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: #e5e5e5;
+      padding: 30px 10px 20px;
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #e63946;
+      margin-bottom: 30px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      margin: 0 0 10px;
+      color: #e63946;
+      font-size: 18px;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .card-content a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #e63946;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Proyectos</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="habilidadestec.html">Habilidades Técnicas</a></li>
+        <li><a href="proyecto.html">Proyectos</a></li>
+        <li><a href="contacto.html">Formulario de Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Mis Proyectos</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPSYTbzfnNl2qVzmwjL-8BQvNFeJwv66cWXQ&s" alt="Proyecto 1">
+        <div class="card-content">
+          <h3>Orquideas Tour</h3>
+          <p>Una pagina web desarrollada en mi clase de Curso Integrador I: Sistemas Software para una empresa de transporte y encomiendas de Moquegua. "https://orquideas-frontend.vercel.app"</p>
+          <a href="https://orquideas-frontend.vercel.app">Ver más</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://i.blogs.es/55fc1a/koa-re-reckoning-portada/500_333.webp" alt="Proyecto 2">
+        <div class="card-content">
+          <h3>RPG de Aventura</h3>
+          <p>Mi grupo y yo diseñamos un RPG basico de aventura en nuestra clase de Diseño de Patrones</p>
+          <a href="#">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-links");
+      nav.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
